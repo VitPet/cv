@@ -1,3 +1,6 @@
+html{
+  font-size: 100%;
+}
 .wrapper{
     background-color: #dde; 
 }
@@ -31,7 +34,7 @@ header{
 
 #name{
   font-family: 'Russo One', sans-serif;
-  font-size: 28px;
+  font-size: 3rem;
   letter-spacing: 1.5px;  
   padding-bottom: 10px;
   color: #ccc;
@@ -39,7 +42,7 @@ header{
 }
 #position{
   font-family: 'Righteous', cursive;
-  font-size: 24px;
+  font-size: 2rem;
   letter-spacing: 1.5px;
   color: #ddd;
   text-shadow: 1px 1px 5px black, 0 0 1em black;
@@ -73,13 +76,14 @@ header{
 }
 
 .level{
-  padding: 15px 0px 5px 13px;
+  padding: 15px 0px 5px 10px;
 }
 
 .stars{
     font-size: 28px;
  
 }
+.row{text-align: center;}
 
 footer{
   background-color: #555;
@@ -90,22 +94,55 @@ footer{
   padding: 20px;
 }
 .icons{
-  padding: 5px;
+  padding-left:  20px;
 }
 .icons:hover{
   color: #222; 
 }
+.col-xs-offset-3{
 
-.parallax { 
-    /* The image used */
-    background-image: url("img_parallax.jpg");
+}
+@media(max-width: 1199px){
+  .col-md-3{
+  
+  margin-left: 45px;
+}
 
-    /* Set a specific height */
-    height: 500px; 
+}
 
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+@media(max-width: 991px){
+  .col-sm-3{
+    margin-left: 25px;
+  }
+.level{
+  padding: 15px 0px 5px 15px;
+}
+  
+.stars{
+    font-size: 27px;
+ 
+}
+}
+@media(max-width: 767px){
+
+.col-xs-6{
+  text-align: center;
+  margin-left: 25%;
+  
+
+  
+}
+.level{
+  
+  padding: 2rem 0px 2rem 0.3rem;
+}
+
+.stars{
+    font-size: 2.3rem;
+ 
+}
+.svg{
+  max-width: 100%;
+  height: auto;
+}
 }
