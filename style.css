@@ -91,10 +91,11 @@ footer{
 .contact{
   font-size:32px;
   margin-top: 140px;
-  padding: 20px;
+  
 }
 .icons{
-  padding-left:  20px;
+ 
+ padding:25px 5px; 
 }
 .icons:hover{
   color: #222; 
@@ -128,8 +129,7 @@ footer{
 .col-xs-6{
   text-align: center;
   margin-left: 25%;
-  
-
+  margin-top: 20px;
   
 }
 .level{
@@ -144,5 +144,10 @@ footer{
 .svg{
   max-width: 100%;
   height: auto;
+}
+.contact{
+ 
+  margin-top: 40px;
+  
 }
 }
