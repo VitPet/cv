@@ -9,6 +9,11 @@
 
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Righteous|Russo+One" rel="stylesheet">
+	<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
 	
 	
 </head>
@@ -63,44 +68,81 @@
 
 			</div>
 			
-			<button class="but" id="toggler" href="#">See more</button>
-		<div id="box" style="display: none;">
-				<div class="frameworks row">
-		<div class="col-md-2 col-md-offset-1">
-			<img src="images/jq.svg" width="170px">
-		</div>
-		<div class="col-md-3">
-			<img src="images/node.svg" width="270px">
-		</div>
-		<div class="col-md-3">
-			<img src="images/react.svg" width="250px">
-		</div>
-		<div class="col-md-1">
-			<img src="images/ajax.svg" width="200px">
-		</div>
-		
-		</div>
-    
-	<div class="frameworks row">
-		<div class="col-md-2 col-md-offset-1">
-			<img src="images/gulp.svg" width="170px">
-		</div>
-		<div class="col-md-3">
-			<img src="images/git.svg" width="270px">
-		</div>
-		<div class="col-md-3">
-			<img src="images/boot1.svg" width="200px">
-		</div>
-		<div class="col-md-1">
-			<img src="images/sass.svg" width="200px">
-		</div>
-	
+		<!-- 	<button class="but" id="toggler" href="#">See more</button>
+				<div id="box" style="display: none;">
+			<div class="frameworks row">
+				<div class="col-md-2 col-md-offset-1">
+		<img src="images/jq.svg" width="170px">
+				</div>
+				<div class="col-md-3">
+		<img src="images/node.svg" width="270px">
+				</div>
+				<div class="col-md-3">
+		<img src="images/react.svg" width="250px">
+				</div>
+				<div class="col-md-1">
+		<img src="images/ajax.svg" width="200px">
+				</div>
+				
+				</div>
+		    
+			<div class="frameworks row">
+				<div class="col-md-2 col-md-offset-1">
+		<img src="images/gulp.svg" width="170px">
+				</div>
+				<div class="col-md-3">
+		<img src="images/git.svg" width="270px">
+				</div>
+				<div class="col-md-3">
+		<img src="images/boot1.svg" width="200px">
+				</div>
+				<div class="col-md-1">
+		<img src="images/sass.svg" width="200px">
+				</div>
 			
-		</div>
+		
+				</div> -->
 	
-
+			<div id="box" class="box">  
+				<div class="frameworks row">
+				<div class="col-md-2 col-md-offset-1">
+		<img src="images/jq.svg" width="170px">
+				</div>
+				<div class="col-md-3">
+		<img src="images/node.svg" width="270px">
+				</div>
+				<div class="col-md-3">
+		<img src="images/react.svg" width="250px">
+				</div>
+				<div class="col-md-1">
+		<img src="images/ajax.svg" width="200px">
+				</div>
+				
+				</div>
+		    
+			<div class="frameworks row">
+				<div class="col-md-2 col-md-offset-1">
+		<img src="images/gulp.svg" width="170px">
+				</div>
+				<div class="col-md-3">
+		<img src="images/git.svg" width="270px">
+				</div>
+				<div class="col-md-3">
+		<img src="images/boot1.svg" width="200px">
+				</div>
+				<div class="col-md-1">
+		<img src="images/sass.svg" width="200px">
+				</div>
+			
+		
+				</div>
+			
+			</div>  
+        <button class="but">See more</button>
 			</div>
-</div>
+
+
+
 
 
 	<footer>
@@ -123,30 +165,38 @@
 
 <script type="text/javascript">
 
-window.onload= function() {
-    document.getElementById('toggler').onclick = function() {
-        openbox('box', this);
-        return false;
-    };
-};
 
-function openbox(id, toggler) {
-    var div = document.getElementById(id);
-    if(div.style.display == 'block') {
-        div.style.display = 'none';
-        toggler.innerHTML = 'See more';
-    }
-    else {      
-    		div.style.display = 'block'
-        toggler.innerHTML = 'Hide';
+var box = $('#box');
+ 		box.addClass('hidden');
+  	box.addClass('visuallyhidden');
+  
+    box.one('transitionend', function(e) {
+   
+   });
+ 
 
+$('button').on('click', function () {
+  
+  if (box.hasClass('hidden')) {
+     box.removeClass('hidden');
+    setTimeout(function () {
+      box.removeClass('visuallyhidden');
+    }, 20);
+
+  } else {
+    
+    box.addClass('visuallyhidden');
+  
+    box.one('transitionend', function(e) {
+    box.addClass('hidden');
+   });
+    
   }
 
-}
-
+});
+  
 
 </script>
 
-	
-</body>
+	</body>
 </html>

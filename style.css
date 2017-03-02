@@ -123,6 +123,21 @@ footer{
   background-color: #444;
   transition: 0.3s;
 }
+.box {
+
+  transition: all 1s linear;
+  
+}
+
+.hidden {
+  display: none;
+}
+
+.visuallyhidden {
+  opacity: 0;
+}
+
+
 
 @media(max-width: 1199px){
   .col-md-3{
