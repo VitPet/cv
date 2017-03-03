@@ -251,6 +251,9 @@ transition: all 1s linear;
  }
 
  @media(max-width: 480px){
+  header{
+  height: 400px;
+}
   .img{
   margin-top: 30px;
 }  
