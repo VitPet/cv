@@ -136,13 +136,14 @@ footer{
 .visuallyhidden {
   opacity: 0;
 }
-
-
-
 @media(max-width: 1199px){
   .col-md-3{
-  
   margin-left: 45px;
+}
+@media(min-width: 1199px){
+  .boot{
+  
+  margin-right: 100px;
 }
 
 }
@@ -160,6 +161,24 @@ footer{
  
 }
 }
+
+@media(min-width: 992px){
+  .git{
+  
+  margin-left: 20%;
+}
+
+}
+
+
+.node{
+    margin-left: 15%;
+  }
+
+}
+
+
+
 @media(max-width: 767px){
 
 .col-xs-6{
@@ -186,4 +205,61 @@ footer{
   margin-top: 40px;
   
 }
+
 }
+@media (min-width: 768px) and (max-width: 991px) {
+   
+   .react, .node{
+    margin-top: 20px; 
+    margin-left: -20%;
+   }
+   .ajax{
+     margin-top: 10px;
+     margin-left: -50%;
+
+   }
+   .boot ,.sass{
+     margin-top: 30px; 
+    margin-left: -35%;
+   }
+ }
+
+ @media (min-width: 480px) and (max-width: 767px){
+  .see{
+    max-width: 100%;
+    height: auto;
+    margin-top: 70px;
+  }
+    .jq{
+      margin-top: 0px;
+    }
+
+    .node{
+        margin-right: 10%;      
+    }
+    .react{
+      margin-left: 5%;
+      margin-top: 25px;
+    }
+    .gulp{
+      margin-top: 25px;
+    }
+ }
+
+ @media(max-width: 480px){
+  .see{
+    margin-top: 50px;
+    max-width: 100%;
+    height: auto;
+  }
+  .jq{
+    margin-top: 0px;
+  }
+  .node{
+    margin-left: -0.1%;
+    margin-top: 60px; 
+  }
+  .ajax{
+    margin-top: 70px;
+  }
+ }
