@@ -169,8 +169,7 @@
 var box = $('#box');
  		box.addClass('hidden');
   	box.addClass('visuallyhidden');
-  
-    box.one('transitionend', function(e) {
+  	box.one('transitionend', function(e) {
    
    });
  
@@ -179,14 +178,21 @@ $('button').on('click', function () {
   
   if (box.hasClass('hidden')) {
      box.removeClass('hidden');
-    setTimeout(function () {
+     setTimeout(function () {
       box.removeClass('visuallyhidden');
     }, 20);
 
+  	$(document).ready ( function(){
+		$('.but').text('See less');
+		});
+
   } else {
+  		$(document).ready ( function(){
+		$('.but').text('See more');
+		});
+
     
-    box.addClass('visuallyhidden');
-  
+  	box.addClass('visuallyhidden');
     box.one('transitionend', function(e) {
     box.addClass('hidden');
    });
