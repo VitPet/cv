@@ -138,7 +138,7 @@
 				</div>
 			
 			</div>  
-        <button class="but">See more</button>
+        <a href="#myDiv" class="but">See more</a>
 			</div>
 
 
@@ -146,7 +146,7 @@
 
 
 	<footer>
-		<div class="container-fluid contact">
+		<div id="myDiv" class="container-fluid contact">
 			<div class="row">
 					
 			      <a href="https://github.com/VitPet"><i class="fa fa-github icons transition" aria-hidden="true"></i></a>
@@ -165,7 +165,6 @@
 
 <script type="text/javascript">
 
-
 var box = $('#box');
  		box.addClass('hidden');
   	box.addClass('visuallyhidden');
@@ -174,7 +173,7 @@ var box = $('#box');
    });
  
 
-$('button').on('click', function () {
+$('a').on('click', function () {
   
   if (box.hasClass('hidden')) {
      box.removeClass('hidden');
@@ -200,6 +199,18 @@ $('button').on('click', function () {
   }
 
 });
+$(document).ready(function () {
+    $("button").click(function () {
+        var elementClick = $(this).attr("href");
+        var destination = $(elementClick).offset().top;
+        if ($.browser.safari) {
+            $('body').animate({ scrollTop: destination }, 1100); 
+        }
+        return false; 
+    });
+});
+
+
   
 
 </script>
